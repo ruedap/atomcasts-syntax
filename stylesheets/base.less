@@ -1,0 +1,170 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
+// for a full listing of what's available.
+
+@import "ui-variables";
+@import "colors";
+
+.editor-colors {
+  background-color: @background-color_editor;
+  color: @color_editor;
+}
+
+.editor {
+  .markup.underline.link.hyperlink {
+    text-decoration: underline;
+  }
+  .invisible-character,
+  .indent-guide {
+    color: @color_invisible;
+  }
+
+  .gutter {
+    background-color: @background-color_gutter;
+  }
+
+  .gutter .line-number {
+    opacity: 0.15;
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker::after {
+    background-color: darken(@background-color_gutter, 5%);
+  }
+
+  .selection .region {
+    background-color: @background-color_selection;
+  }
+
+  .cursor {
+    border-color: @color_editor;
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: darken(@background-color_gutter, 2%);
+  }
+}
+
+.bracket-matcher {
+  background-color: darken(@background-color_editor, 10%);
+  opacity: 0.25;
+}
+
+.comment {
+  color: @color_comment;
+}
+
+.entity, .tag {
+  color: @color_entity;
+}
+
+.keyword, .storage.type {
+  color: @color_keyword;
+}
+
+.constant {
+  color: @color_constant;
+
+  &.numeric,
+  &.boolean {
+    color: @color_numeric-constant;
+  }
+}
+
+.variable {
+  color: @color_variable;
+}
+
+.delimiter, .brace {
+  color: @color_editor;
+}
+
+.delimiter.period {
+  color: lighten(@color_string, 15%);
+}
+
+.invalid.deprecated {
+  text-decoration: underline;
+  color: @color_attention;
+}
+
+.invalid.illegal {
+  color: @color_attention;
+}
+
+.string {
+  color: @color_string;
+
+  .constant.character.escape {
+    color: @color_constant;
+  }
+
+  &.regexp {
+    color: @color_regexp;
+
+    .source.ruby.embedded,
+    .string.regexp.arbitrary-repitition {
+      color: @color_attention;
+    }
+  }
+}
+
+.function {
+  color: @color_function;
+
+  &.punctuation {
+    color: @color_editor;
+  }
+
+  .punctuation.definition.parameters {
+    color: @color_dark-orange;
+  }
+}
+
+.property-name {
+  color: lighten(@color_constant, 10%);
+}
+
+// HTML
+.html {
+  .tag {
+    color: @color_function;
+  }
+}
+
+// CSS
+.css {
+  .support.type.property-name {
+    &:extend(.function);
+  }
+  .keyword.other {
+    color: @color_regexp;
+    &.unit {
+      color: @color_numeric-constant;
+    }
+  }
+}
+
+// Markdown
+.gfm {
+  &.heading {
+    &:extend(.function);
+  }
+
+  &.raw {
+    color: @color_function;
+  }
+
+  &.underline.link {
+    &:extend(.string);
+  }
+}
+
+// ERB
+.erb {
+  .punctuation.section.embedded {
+    color: @color_keyword;
+  }
+}
