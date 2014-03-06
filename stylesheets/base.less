@@ -127,6 +127,16 @@
   color: lighten(@color_constant, 10%);
 }
 
+// vim-mode
+.vim-mode.command-mode:not(.mini) {
+  .cursor, .cursor.blink-off {
+    border: 0;
+    background-color: white;
+    visibility: visible;
+    opacity: 0.5;
+  }
+}
+
 // HTML
 .html {
   .tag {
@@ -147,13 +157,22 @@
   }
 }
 
-// vim-mode
-.vim-mode.command-mode:not(.mini) {
-  .cursor, .cursor.blink-off {
-    border: 0;
-    background-color: white;
-    visibility: visible;
-    opacity: 0.5;
+// Sass
+.sass {
+  .meta.variable-declaration,
+  .meta.property-value {
+    .punctuation.definition.entity {
+      color: @color_variable;
+    }
+    .keyword.other.unit {
+      color: @color_numeric-constant;
+    }
+  }
+  .meta.property-name {
+    color: @color_editor;
+    .support.type.property-name {
+      color: @color_function;
+    }
   }
 }
 
