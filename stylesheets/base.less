@@ -1,8 +1,3 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
-// for a full listing of what's available.
-
 @import "ui-variables";
 @import "colors";
 
@@ -157,7 +152,7 @@
 // Haml
 .haml {
   .punctuation.definition.tag {
-    color: @atomcasts-color_definition;
+    color: @atomcasts-color_punctuation-definition;
   }
   .entity.name.tag {
     color: @atomcasts-color_html-element;
@@ -187,6 +182,30 @@
     color: @atomcasts-color_regexp;
     &.unit {
       color: @atomcasts-color_numeric-constant;
+    }
+  }
+}
+
+// SCSS
+.scss {
+  .entity.attribute-name.placeholder {
+    color: @atomcasts-color_scss-placeholder;
+    .punctuation.definition.entity {
+      color: @atomcasts-color_keyword;
+    }
+  }
+  .meta.attribute-selector {
+    color: @atomcasts-color_editor;
+    .punctuation {
+      color: @atomcasts-color_editor;
+    }
+    .entity.attribute-name {
+      color: @atomcasts-color_css-element;
+    }
+    .string {
+      .punctuation {
+        color: @atomcasts-color_string;
+      }
     }
   }
 }
