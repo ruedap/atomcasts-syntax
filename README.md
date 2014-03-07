@@ -6,11 +6,15 @@ An Atom syntax theme based on the RailsCasts theme.
 
 `.scss`
 
-![.scss](https://raw.github.com/ruedap/atomcasts-syntax/master/screenshots/scss.png)
+[![.scss](https://raw.github.com/ruedap/atomcasts-syntax/master/screenshots/scss.png)](https://raw.github.com/ruedap/atomcasts-syntax/master/screenshots/scss.png)
 
 `.less`
 
-![.less](https://raw.github.com/ruedap/atomcasts-syntax/master/screenshots/less.png)
+[![.less](https://raw.github.com/ruedap/atomcasts-syntax/master/screenshots/less.png)](https://raw.github.com/ruedap/atomcasts-syntax/master/screenshots/less.png)
+
+`.erb`
+
+[![.erb](https://raw.github.com/ruedap/atomcasts-syntax/master/screenshots/erb.png)](https://raw.github.com/ruedap/atomcasts-syntax/master/screenshots/erb.png)
 
 
 ## Installation
