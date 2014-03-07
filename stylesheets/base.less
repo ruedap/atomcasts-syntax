@@ -143,15 +143,21 @@
 
 // HTML
 .html {
-  .tag {
-    color: @atomcasts-color_function;
+  .meta.tag.any {
+    color: @atomcasts-color_html-element;
+    .punctuation.definition.tag {
+      color: @atomcasts-color_html-element;
+    }
+    .entity.name.tag {
+      color: @atomcasts-color_html-element;
+    }
   }
 }
 
 // Haml
 .haml {
   .punctuation.definition.tag {
-    color: @atomcasts-color_punctuation-definition;
+    color: @atomcasts-color_definition;
   }
   .entity.name.tag {
     color: @atomcasts-color_html-element;
@@ -171,8 +177,11 @@
 
 // CSS
 .css {
+  .entity.name.tag {
+    color: @atomcasts-color_css-element;
+  }
   .support.type.property-name {
-    &:extend(.function);
+    color: @atomcasts-color_css-property-name;
   }
   .keyword.other {
     color: @atomcasts-color_regexp;
@@ -197,7 +206,7 @@
   .meta.property-name {
     color: @atomcasts-color_editor;
     .support.type.property-name {
-      color: @atomcasts-color_function;
+      color: @atomcasts-color_css-property-name;
     }
   }
 }
