@@ -7,8 +7,8 @@
 @import "colors";
 
 .editor-colors {
-  background-color: @background-color_editor;
-  color: @color_editor;
+  background-color: @atomcasts-background-color_editor;
+  color: @atomcasts-color_editor;
 }
 
 .editor {
@@ -17,11 +17,11 @@
   }
   .invisible-character,
   .indent-guide {
-    color: @color_invisible;
+    color: @atomcasts-color_invisible;
   }
 
   .gutter {
-    background-color: @background-color_gutter;
+    background-color: @atomcasts-background-color_gutter;
   }
 
   .gutter .line-number {
@@ -31,112 +31,112 @@
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker::after {
-    background-color: darken(@background-color_gutter, 5%);
+    background-color: darken(@atomcasts-background-color_gutter, 5%);
   }
 
   .selection .region {
-    background-color: @background-color_selection;
+    background-color: @atomcasts-background-color_selection;
   }
 
   .cursor {
-    border-color: @color_editor;
+    border-color: @atomcasts-color_editor;
   }
 
   .line-number.cursor-line-no-selection {
-    background-color: darken(@background-color_gutter, 2%);
+    background-color: darken(@atomcasts-background-color_gutter, 2%);
   }
 }
 
 .bracket-matcher {
-  background-color: darken(@background-color_editor, 10%);
+  background-color: darken(@atomcasts-background-color_editor, 10%);
   opacity: 0.25;
 }
 
 .comment {
-  color: @color_comment;
+  color: @atomcasts-color_comment;
 }
 
 .entity, .tag {
-  color: @color_entity;
+  color: @atomcasts-color_entity;
 }
 
 .keyword, .storage.type {
-  color: @color_keyword;
+  color: @atomcasts-color_keyword;
 }
 
 .constant {
-  color: @color_constant;
+  color: @atomcasts-color_constant;
 
   &.numeric,
   &.boolean {
-    color: @color_numeric-constant;
+    color: @atomcasts-color_numeric-constant;
   }
 }
 
 .variable {
-  color: @color_variable;
+  color: @atomcasts-color_variable;
 }
 
 .delimiter, .brace {
-  color: @color_editor;
+  color: @atomcasts-color_editor;
 }
 
 .delimiter.period {
-  color: lighten(@color_string, 15%);
+  color: lighten(@atomcasts-color_string, 15%);
 }
 
 .invalid.deprecated {
   text-decoration: underline;
-  color: @color_attention;
+  color: @atomcasts-color_attention;
 }
 
 .invalid.illegal {
-  color: @color_attention;
+  color: @atomcasts-color_attention;
 }
 
 .string {
-  color: @color_string;
+  color: @atomcasts-color_string;
 
   .constant.character.escape {
-    color: @color_constant;
+    color: @atomcasts-color_constant;
   }
 
   &.regexp {
-    color: @color_regexp;
+    color: @atomcasts-color_regexp;
 
     .source.ruby.embedded,
     .string.regexp.arbitrary-repitition {
-      color: @color_attention;
+      color: @atomcasts-color_attention;
     }
   }
 }
 
 .function {
-  color: @color_function;
+  color: @atomcasts-color_function;
 
   &.punctuation {
-    color: @color_editor;
+    color: @atomcasts-color_editor;
   }
 
   .punctuation.definition.parameters {
-    color: @color_dark-orange;
+    color: @atomcasts-color_keyword;
   }
 }
 
 .property-name {
-  color: lighten(@color_constant, 10%);
+  color: lighten(@atomcasts-color_constant, 10%);
 }
 
 // vim-mode
 .vim-mode.command-mode.is-focused:not(.mini) {
   .cursor, .cursor.blink-off {
     border: 0;
-    background-color: @color_editor;
+    background-color: @atomcasts-color_editor;
     visibility: visible;
     opacity: 0.5;
   }
   .line.cursor-line {
-    background-color: @background-color_gutter;
+    background-color: @atomcasts-background-color_gutter;
     opacity: 0.95;
   }
 }
@@ -144,17 +144,28 @@
 // HTML
 .html {
   .tag {
-    color: @color_function;
+    color: @atomcasts-color_function;
   }
 }
 
 // Haml
 .haml {
   .punctuation.definition.tag {
-    color: @color_punctuation-definition;
+    color: @atomcasts-color_punctuation-definition;
   }
   .entity.name.tag {
-    color: @color_function;
+    color: @atomcasts-color_html-element;
+    &.class {
+      color: @atomcasts-color_css-class;
+    }
+    &.id {
+      color: @atomcasts-color_css-id;
+    }
+  }
+  .source.embedded {
+    .entity.name.tag {
+      color: @atomcasts-color_keyword;
+    }
   }
 }
 
@@ -164,9 +175,9 @@
     &:extend(.function);
   }
   .keyword.other {
-    color: @color_regexp;
+    color: @atomcasts-color_regexp;
     &.unit {
-      color: @color_numeric-constant;
+      color: @atomcasts-color_numeric-constant;
     }
   }
 }
@@ -176,16 +187,16 @@
   .meta.variable-declaration,
   .meta.property-value {
     .punctuation.definition.entity {
-      color: @color_variable;
+      color: @atomcasts-color_variable;
     }
     .keyword.other.unit {
-      color: @color_numeric-constant;
+      color: @atomcasts-color_numeric-constant;
     }
   }
   .meta.property-name {
-    color: @color_editor;
+    color: @atomcasts-color_editor;
     .support.type.property-name {
-      color: @color_function;
+      color: @atomcasts-color_function;
     }
   }
 }
@@ -197,7 +208,7 @@
   }
 
   &.raw {
-    color: @color_function;
+    color: @atomcasts-color_function;
   }
 
   &.underline.link {
@@ -208,6 +219,6 @@
 // ERB
 .erb {
   .punctuation.section.embedded {
-    color: @color_keyword;
+    color: @atomcasts-color_keyword;
   }
 }
