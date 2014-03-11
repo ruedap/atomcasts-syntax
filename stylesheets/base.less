@@ -17,33 +17,37 @@
 
   .gutter {
     background-color: @atomcasts-background-color_gutter;
+    @_background-color: darken(@atomcasts-background-color_gutter, 5%);
+    .line-number {
+      &.cursor-line {
+        color: @atomcasts-color_gutter-line-number-cursor-line;
+      }
+      &.folded,
+      &::after {
+        background-color: @_background-color;
+      }
+      &.cursor-line-no-selection {
+        background-color: darken(@atomcasts-background-color_gutter, 2%);
+      }
+    }
+    .fold-marker::after {
+      background-color: @_background-color;
+    }
   }
 
-  .gutter .line-number.cursor-line {
-    color: @atomcasts-color_gutter-line-number-cursor-line;
-  }
-
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker::after {
-    background-color: darken(@atomcasts-background-color_gutter, 5%);
-  }
-
-  .selection .region {
-    background-color: @atomcasts-background-color_selection;
-  }
-
-  .cursor {
-    border-color: @atomcasts-color_editor;
-  }
-
-  .line-number.cursor-line-no-selection {
-    background-color: darken(@atomcasts-background-color_gutter, 2%);
-  }
-
-  .underlayer {
-    .wrap-guide {
-      background-color: @atomcasts-color_invisible;
+  .scroll-view {
+    .overlayer {
+      .cursor {
+        border-color: @atomcasts-color_editor;
+      }
+    }
+    .underlayer {
+      .wrap-guide {
+        background-color: @atomcasts-color_invisible;
+      }
+      .selection .region {
+        background-color: @atomcasts-background-color_selection;
+      }
     }
   }
 }
