@@ -1,6 +1,6 @@
 # Atomcasts Syntax Theme
 
-An Atom syntax theme based on the RailsCasts theme.
+An Atom syntax theme for [vim-mode](https://github.com/atom/vim-mode) based on the RailsCasts theme.
 
 ## Screenshots
 
