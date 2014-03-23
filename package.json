@@ -3,7 +3,7 @@
   "theme": "syntax",
   "version": "0.10.0",
   "private": true,
-  "description": "An Atom syntax theme based on the RailsCasts theme.",
+  "description": "An Atom syntax theme for vim-mode based on the RailsCasts theme.",
   "repository": "https://github.com/ruedap/atomcasts-syntax",
   "licenses": [
     {
